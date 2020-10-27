@@ -152,9 +152,9 @@ export default {
           for (let i in cells) {
             whereFormuras.push(`${state.headers[i]}='${cells[i]}'`);
           }
-          state.sql += `DELETE ${state.tableName} WHERE ${whereFormuras.join(
-            " AND "
-          )}\r\n`;
+          state.sql += `DELETE FROM ${
+            state.tableName
+          } WHERE ${whereFormuras.join(" AND ")}\r\n`;
         }
         methods.rememberTableName();
       },
