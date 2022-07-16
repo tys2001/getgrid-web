@@ -130,10 +130,10 @@ export default {
           let whereFormuras = [];
           for (let i in cells) {
             if (i < blankColIndex) {
-              setFormuras.push(`${state.headers[i]}='${cells[i]}'`);
+              whereFormuras.push(`${state.headers[i]}='${cells[i]}'`);
             }
             if (i > blankColIndex) {
-              whereFormuras.push(`${state.headers[i]}='${cells[i]}'`);
+              setFormuras.push(`${state.headers[i]}='${cells[i]}'`);
             }
           }
           state.sql += `UPDATE ${state.tableName} SET ${setFormuras.join(
